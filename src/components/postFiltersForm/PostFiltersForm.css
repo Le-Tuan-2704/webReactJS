@@ -1,0 +1,16 @@
+.search {
+    margin-bottom: 50px;
+}
+
+.search input {
+    width: 80%;
+    /* display: inline; */
+}
+
+.search button {
+    /* display: inline; */
+}
+
+.search i {
+    font-size: 20px;
+}

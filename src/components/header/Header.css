@@ -1,0 +1,15 @@
+.header .first {
+    height: 50px;
+}
+
+.header .second {
+    height: 100px;
+}
+.header .second nav {
+    height: 100px;
+}
+.header .second li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}

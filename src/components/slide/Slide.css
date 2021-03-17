@@ -1,0 +1,9 @@
+.header .last {
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.header .last .carousel-inner img {
+    width: 100%;
+    height: 500px;
+}
