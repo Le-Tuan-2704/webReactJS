@@ -1,5 +1,6 @@
 .button {
     display: block;
-    text-align: center;
+    text-align: left;
     margin-bottom: 50px;
+    margin-right: 50px;
 }

@@ -8,6 +8,7 @@ import Pagination from './components/pagination/Pagination';
 import queryString from 'query-string'
 import PostFiltersForm from './components/postFiltersForm/PostFiltersForm';
 import NavbarContent from './components/navbarContent/NavbarContent';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -70,7 +71,7 @@ function App() {
       <Header />
       <Slide />
       <div className="row">
-        <div className="col-3 border-right">
+        <div className="col-3 ">
           <div className="container">
             <PostFiltersForm onSubmit={handFiltersChange} />
             <NavbarContent />
@@ -84,6 +85,7 @@ function App() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
