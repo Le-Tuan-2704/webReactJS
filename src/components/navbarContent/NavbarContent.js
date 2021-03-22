@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route, Switch } from 'react-router';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 NavbarContent.propTypes = {
 
@@ -11,20 +13,21 @@ function NavbarContent(props) {
             <nav class="navbar bg-dark navbar-dark">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Trang Chủ</a>
+                        <Link className="nav-link" to='/'>Home</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Giới Thiệu</a>
+                        <Link className="nav-link" to='/Product'>Product</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tác Phẩm</a>
+                        <Link className="nav-link" to='/Author'>Author</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tác Giả</a>
+                        <Link className="nav-link" to='/Introduce'>Introduce</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Liên Hệ</a>
+                        <Link className="nav-link" to='/Contact'>Contact</Link>
                     </li>
+
                 </ul>
 
             </nav>
