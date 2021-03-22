@@ -4,6 +4,7 @@ import PostList from '../postList/PostList';
 import Pagination from '../pagination/Pagination';
 import queryString from 'query-string'
 import PostFiltersForm from '../postFiltersForm/PostFiltersForm';
+import ProductDetails from '../productDetails/ProductDetails';
 
 Product.propTypes = {
 
@@ -14,6 +15,7 @@ Product.propTypes = {
 function Product(props) {
 
     const [postList, setPostList] = useState([]);
+    const [product, setProduct] = useState(null);
     const [pagination, setPagination] = useState({
         _page: 1,
         _limit: 10,
@@ -41,8 +43,6 @@ function Product(props) {
                 setPostList(data);
                 setPagination(pagination);
 
-                // console.log("data: ", pagination);
-
             } catch (error) {
                 console.log("failed to fetch post list", error.message);
             }
@@ -68,21 +68,41 @@ function Product(props) {
         });
     }
 
-    return (
-        <div>
-            <div className="row">
-                <div className="col-6"></div>
-                <div className="col-6">
-                    <PostFiltersForm onSubmit={handFiltersChange} />
-                </div>
-            </div>
+    function showProductDetails(prod) {
+        // console.log(typeof (prod));
+        // console.log(prod);
+        setProduct(prod);
+        // console.log(product.id);
+    }
 
-            <PostList posts={postList} />
-            <Pagination
-                pagination={pagination}
-                onPageChange={handlePageChange}
-            />
-        </div>
+    function showProducts() {
+        return (
+            <div>
+                <div className="row">
+                    <div className="col-6"></div>
+                    <div className="col-6">
+                        <PostFiltersForm onSubmit={handFiltersChange} />
+                    </div>
+                </div>
+                <PostList
+                    posts={postList}
+                    clickProduct={showProductDetails}
+                />
+                <Pagination
+                    pagination={pagination}
+                    onPageChange={handlePageChange}
+                />
+            </div>
+        )
+    }
+
+    return (
+
+        < div >
+            {
+                product ? <ProductDetails posts={product} /> : showProducts()
+            }
+        </div >
     );
 }
 

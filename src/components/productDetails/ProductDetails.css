@@ -1,0 +1,23 @@
+.img {
+    position: relative;
+    margin: 20px 0px;
+}
+
+.img img {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    position: absolute;
+    color: white;
+    bottom: 10px;
+    text-align: center;
+}
+
+.title h2 {
+}
+
+.text {
+    margin-bottom: 50px;
+}
